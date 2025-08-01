@@ -1,0 +1,59 @@
+/* Colour Variables */
+
+$color-bg-grey: #F6F6F6;
+$color-bg-grey2: #EAEAEA;
+$color-font: #353535;
+$color-purple: #9356DC;
+
+@mixin gradient {
+    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+}
+@mixin box-shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+}
+
+/* General settings */
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+/* Inidividual elements*/
+/* Button */
+
+.searchbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    height: 50px;
+    border-radius: 25px;
+    @include gradient;
+    @include box-shadow;
+    
+}
+/* Index Header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .logo {
+        height: 63px;
+        
+        img {
+            padding-top: 13px;
+            width: 197px;
+            height: 36px;
+        }
+    }
+}
+
+.ex-button {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}

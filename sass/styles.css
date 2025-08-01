@@ -1,0 +1,42 @@
+/* Colour Variables */
+/* General settings */
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+/* Inidividual elements*/
+/* Button */
+.searchbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Index Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header .logo {
+  height: 63px;
+}
+header .logo img {
+  padding-top: 13px;
+  width: 197px;
+  height: 36px;
+}
+
+.ex-button {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
