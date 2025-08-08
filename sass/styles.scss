@@ -3,37 +3,71 @@
 $color-bg-grey: #F6F6F6;
 $color-bg-grey2: #EAEAEA;
 $color-font: #353535;
+$color-font-2: #7E7E7E;
 $color-purple: #9356DC;
+$color-light-green: #99E2D0;
+$color-dark-green: #008766;
 
 @mixin gradient {
     background: linear-gradient(to bottom, #FF79DA, #9356DC);
 }
 @mixin box-shadow {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
 
+@mixin box-shadow-2 {
+    box-shadow: 0px 4px 15px 0px #0000001A;
+}
+
+@mixin box-shadow-3 {
+    box-shadow: 0px 4px 15px 0px #00000026;
+}
+
+@mixin box-shadow-4 {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* General settings */
 body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
 }
 
-/* Inidividual elements*/
-/* Button */
+h1 {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 24px;
+}
 
-.searchbutton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 16px;
+h2 {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+p {
+    margin: 0px;
+}
+
+.shrikhand {
+    font-family: "shrikhand", Arial, Helvetica, sans-serif;
+    font-size: 18px;
     font-weight: 400;
-    height: 50px;
-    border-radius: 25px;
-    @include gradient;
-    @include box-shadow;
-    
 }
+
+
+
+
+
+
+
+
 /* Index Header */
 
 header {
@@ -41,8 +75,11 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+     
     .logo {
         height: 63px;
+        width: 100%;
+        box-shadow: 0px 2px 4px 0px #00000026; // Not working?
         
         img {
             padding-top: 13px;
@@ -50,10 +87,223 @@ header {
             height: 36px;
         }
     }
+    .input-placeholder {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 16px;
+        color: $color-font;
+        background-color: $color-bg-grey2;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); // Not working?
+        
+        .input-content {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            gap: 17px;
+        }
+
+    }
+    .search {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-bg-grey;
+        padding: 30px;
+        gap: 20px;
+        p{
+            font-family: "Roboto";
+            font-weight: 300;
+            font-size: 18px;
+            color: $color-font;
+
+        }
+        .searchbutton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            height: 50px;
+            width: 218px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            @include gradient;
+            @include box-shadow;
+        }
+    }
 }
 
-.ex-button {
+/* Explication*/
+
+.explication {
+    padding: 50px 25px 50px 25px;
     display: flex;
-    flex-direction: row;
-    text-align: center;
+    flex-direction: column;
+    h2 {
+        margin-bottom: 20px;
+    }
+    .ex-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .ex-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        background-color: $color-bg-grey;
+        border-radius: 20px;
+        padding: 20px;
+        @include box-shadow-3;
+        position: relative;
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .fa-solid {
+            color: $color-font-2;
+        }
+        .number-wrap {
+            position: absolute;
+            left: -15px;
+
+            .number-circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background-color: $color-purple;
+            position: relative;
+            .number {
+                color: white;
+                position: absolute;
+                left: 7px;
+                top: 3px;
+            }
+        }
+        }
+    }
+    }
+}
+
+
+/* Restaurants */
+
+.restaurants {
+    background-color: $color-bg-grey;
+    padding: 30px 0px 50px 0px;
+
+    h2 {
+        margin-left: 28px;
+        margin-bottom: 20px;
+    }
+
+    .card-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        
+        a {
+            width: 340px;
+            text-decoration: none;
+            color: black;
+            .card {
+                border-radius: 15px;
+                width: 340px;
+                height: 250px;
+                @include box-shadow-2;
+                position: relative;
+                img {
+                    border-radius: 15px 15px 0px 0px;
+                    width: 340px;
+                    height: 170px;
+                    object-fit: cover;
+                    object-position: 0px -57px;
+                }
+                .new {
+                    position: absolute;
+                    width: 80px;
+                    height: 30px;
+                    background-color: $color-light-green;
+                    color: $color-dark-green;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 13px;
+                    left: 248px;
+                }
+
+                .card-content {
+                    padding: 15px;
+                    
+                    .card-txt {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        h3 {
+                            margin: 0px;
+                            
+                        }
+                        p {
+                            margin: 0px;
+                            font-size: 17px;
+                            font-weight: 300;
+                            
+                        }
+                    }
+                }
+
+                .like {
+                    position: absolute;
+                    width: 22px;
+                    height: 21px;
+                    top: 197px;
+                    left: 293px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Footer */
+
+footer {
+    background-color: $color-font;
+    color: white;
+    padding: 22px 25px 22px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p {
+        margin: 0px;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+
+            .bolded {
+                font-weight: 500;
+            }
+        }
+    }
 }
