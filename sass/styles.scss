@@ -285,12 +285,11 @@ header {
                     height: 21px;
                     top: 197px;
                     right: 23px;
+                    
 
-                    input {
+                    input[type="checkbox"] {
+
                         display: none;
-                        :checked ~ label {
-                            background-color: #008766;
-                        }
                     }
                 }
         }

@@ -232,11 +232,8 @@ header .search .searchbutton:hover {
   top: 197px;
   right: 23px;
 }
-.restaurants .card-wrapper .card .like input {
+.restaurants .card-wrapper .card .like input[type=checkbox] {
   display: none;
-}
-.restaurants .card-wrapper .card .like input :checked ~ label {
-  background-color: #008766;
 }
 
 /* Footer */
