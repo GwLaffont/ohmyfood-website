@@ -108,6 +108,16 @@ header {
     }
 }
 
+/* Image */
+
+.image {
+    img {
+        height: 275px;
+        width: 100%;
+        background-clip: padding-box;
+    }
+}
+
 /* Main */
 
 main {
@@ -116,11 +126,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    img {
-        height: 275px;
-        width: 100%;
-        background-clip: padding-box;
-    }
+    
     .menu {
         padding: 20px;
         display: flex;
@@ -137,18 +143,52 @@ main {
             position: relative;
             background-color: white;
             border-radius: 15px;
-            padding: 20px;
+            padding: 15px;
             box-shadow: 0px 4.01px 15.04px 0px #0000001A;
-            p {
-                font-size: 15px;
-                font-weight: 300;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .itemMain {
+                width: 100%;
+
+                .priceline {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: auto;
+                    
+
+                    p {
+                        font-size: 15px;
+                        font-weight: 300;
+                    }
+                    .prix {
+                        font-size: 15px;
+                        font-weight: 500;
+                        
+                    }
+                }
             }
-            .prix {
-                font-size: 15px;
-                font-weight: 500;
+
+            
+            .check {
+                width: 60px;
+                height: 70px;
+                background-color: $color-light-green;
                 position: absolute;
-                bottom: 20px;
-                right: 20px;
+                right: 0px;
+                top: 0px;
+                border-radius: 0px 15px 15px 0px;
+                display: flex;
+                justify-content: center;
+
+                .fa-solid {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    font-size: 20px;
+                    color: white;
+                }
             }
         } 
     }
@@ -201,4 +241,47 @@ footer {
             }
         }
     }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 961px) {
+
+    body {
+        position: relative;
+    }
+
+    .image {
+        img {
+            height: 383px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .img-cover {
+        width: 1055px;
+        height: 30px;
+        border-radius: 30px 30px 0px 0px;
+        background-color: $color-bg-grey;
+        position: absolute;
+    }
+
+    main {
+        width: 1055px;
+        margin: auto;
+
+        .title {
+            margin: auto;
+            .like {
+                position: static;
+            }
+        }
+
+        .menu {
+            width: 634px;
+            margin: auto;
+        }
+    }
+
 }

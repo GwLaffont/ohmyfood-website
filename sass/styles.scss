@@ -80,6 +80,7 @@ header {
         height: 63px;
         width: 100%;
         box-shadow: 0px 2px 4px 0px #00000026; // Not working?
+        overflow: visible;
         
         img {
             padding-top: 13px;
@@ -133,8 +134,15 @@ header {
             width: 218px;
             border-radius: 25px;
             margin-bottom: 30px;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
             @include gradient;
-            @include box-shadow;
+            transition: 0.5s;
+            &:hover {
+                opacity: 0.75;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+               
+            }
         }
     }
 }
@@ -214,16 +222,22 @@ header {
         align-items: center;
         gap: 20px;
         
-        a {
+        .card {
             width: 340px;
-            text-decoration: none;
-            color: black;
-            .card {
+            height: 250px;
+            position: relative;
+            
+            a {
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                color: black;
                 border-radius: 15px;
                 width: 340px;
                 height: 250px;
+                background-color: white;
                 @include box-shadow-2;
-                position: relative;
+                
                 img {
                     border-radius: 15px 15px 0px 0px;
                     width: 340px;
@@ -240,8 +254,8 @@ header {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    top: 13px;
-                    left: 248px;
+                    right: 16px;
+                    top: 16px;
                 }
 
                 .card-content {
@@ -264,14 +278,21 @@ header {
                     }
                 }
 
-                .like {
+            }
+            .like {
                     position: absolute;
                     width: 22px;
                     height: 21px;
                     top: 197px;
-                    left: 293px;
+                    right: 23px;
+
+                    input {
+                        display: none;
+                        :checked ~ label {
+                            background-color: #008766;
+                        }
+                    }
                 }
-            }
         }
     }
 }
@@ -304,6 +325,84 @@ footer {
             .bolded {
                 font-weight: 500;
             }
+        }
+    }
+}
+
+
+/* Desktop */
+
+@media screen and (min-width: 961px) {
+
+
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .explication {
+            
+            width: 1080px;
+            margin: auto;
+            .ex-wrap {
+                display: flex;
+                flex-direction: row;
+                .ex-button {
+                    width: 335px;
+                }
+    
+            }
+        }
+
+    .header {
+        width: 100%;
+        .search {
+            width: 100%;
+            padding: 0px;
+        }
+    }
+
+    
+
+    .restaurants {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            margin-left: 0px;
+        }
+        .card-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 100px;
+            max-width: 1080px;
+            .card {
+                width: 490px;
+                a {
+                    width: 490px;
+                    img {
+                        width: 490px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .footer {
+            display: flex;
+            flex-direction: row;
         }
     }
 }
