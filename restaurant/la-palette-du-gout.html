@@ -25,17 +25,39 @@
         <div class="img-cover"></div>
         <div class="title">
             <div class="title-text"><h1>La palette du goût</h1></div>
-            <div class="like"><i class="fa-regular fa-heart"></i></div>
+            <div class="like">
+                        <input type="checkbox" id="checkbox" class="checkbox">
+                        <label for="heart">
+                            <img src="/assets/vectors/heart.svg" alt="like heart" class="heart">
+                            <img src="/assets/vectors/heart-full.svg" alt="like checked" class="heart heartChecked">
+                        </label>
+                    </div>
         </div>
         <div class="menu">
             <h2>Entrées</h2>
             <div class="bar"></div>
             <div class="item">
+                <input type="checkbox" id="checkbox1" class="checkbox">
+                <label for="checkbox1">
+                    <div class="itemMain">
+                        <h3>Fricassée d'escargots</h3>
+                        <div class="priceline">
+                            <p>Au piment d'Espelette </p>
+                            <div class="prix">25€</div>
+                        </div>
+                    </div>
+                    <div class="check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </label>
+            </div>
+
+            <div class="item">
                 <div class="itemMain">
-                    <h3>Fricassée d'escargots</h3>
+                    <h3>Foie gras de canard mi-cuit</h3>
                     <div class="priceline">
-                        <p>Au piment d'Espelette </p>
-                        <div class="prix">25€</div>
+                        <p>Et ses copeaux de truffe noire</p>
+                        <div class="prix">35€</div>
                     </div>
                     
                 </div>
@@ -43,11 +65,7 @@
                     <i class="fa-solid fa-circle-check"></i>
                 </div>
             </div>
-            <div class="item">
-                <h3>Foie gras de canard mi-cuit</h3>
-                <p>Et ses copeaux de truffe noire</p>
-                <div class="prix">35€</div>
-            </div>
+
             <div class="item">
                 <h3>Œuf au plat</h3>
                 <p>Assaisonné à la truffe sur lit de caviar</p>

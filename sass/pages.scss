@@ -138,63 +138,102 @@ main {
             width: 40px;
             background-color: $color-light-green;
         }
-
-        .item {
-            position: relative;
-            background-color: white;
-            border-radius: 15px;
-            text-decoration: none;
-            color: black;
-            box-shadow: 0px 4.01px 15.04px 0px #0000001A;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            overflow: hidden;
-            
-            .itemMain {
-                width: 100%;
-                padding: 15px;
-
-                .priceline {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    width: auto;
-                    
-
-                    p {
-                        font-size: 15px;
-                        font-weight: 300;
-                    }
-                    .prix {
-                        font-size: 15px;
-                        font-weight: 500;
-                        
-                    }
-                }
-            }
-
-            
-            .check {
-                width: 60px;
-                height: 70px;
-                background-color: $color-light-green;
-                border-radius: 0px 15px 15px 0px;
-                display: flex;
-                justify-content: center;
-                flex-shrink: 0;
-                margin-right: -60px;
-
-                .fa-solid {
-                    margin-top: auto;
-                    margin-bottom: auto;
-                    font-size: 20px;
-                    color: white;
-                }
-
-            }
-        } 
     }
+
+/* Button */
+
+    .item {
+        position: relative;
+        background-color: white;
+        border-radius: 15px;
+        text-decoration: none;
+        color: black;
+        box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+
+        label {
+            width: 100%;
+            padding-right: 60px;
+        }
+        
+
+        .checkbox {
+            display: none;
+        }
+        
+        .itemMain {
+            width: 100%;
+            padding: 15px;
+
+            .priceline {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: auto;
+                
+
+                p {
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+                .prix {
+                    font-size: 15px;
+                    font-weight: 500;
+                    
+                }
+            }
+        }
+
+        .check {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 60px;
+            height: 70px;
+            background-color: $color-light-green;
+            border-radius: 0px 15px 15px 0px;
+            display: flex;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.5s ease-in-out;
+            .fa-solid {
+                margin-top: auto;
+                margin-bottom: auto;
+                font-size: 20px;
+                color: white;
+            }
+        }
+    }
+
+input[type="checkbox"] {
+
+    
+
+    //Default State
+
+    & + label {
+        cursor: pointer;
+        .check {
+            right: -60px;
+        }
+    }
+
+    // Checked state
+
+    &:checked + label {
+        width: 100% -60px ;
+        .check {
+            right: 0px;
+        }
+    }
+}
+
+    /* Search button */
 
     .searchbutton {
             display: flex;

@@ -88,6 +88,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* Button */
+  /* Search button */
 }
 main .menu {
   padding: 20px;
@@ -100,7 +102,7 @@ main .menu .bar {
   width: 40px;
   background-color: #99E2D0;
 }
-main .menu .item {
+main .item {
   position: relative;
   background-color: white;
   border-radius: 15px;
@@ -111,26 +113,38 @@ main .menu .item {
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
+  width: 100%;
 }
-main .menu .item .itemMain {
+main .item label {
+  width: 100%;
+  padding-right: 60px;
+}
+main .item .checkbox {
+  display: none;
+}
+main .item .itemMain {
   width: 100%;
   padding: 15px;
 }
-main .menu .item .itemMain .priceline {
+main .item .itemMain .priceline {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: auto;
 }
-main .menu .item .itemMain .priceline p {
+main .item .itemMain .priceline p {
   font-size: 15px;
   font-weight: 300;
 }
-main .menu .item .itemMain .priceline .prix {
+main .item .itemMain .priceline .prix {
   font-size: 15px;
   font-weight: 500;
 }
-main .menu .item .check {
+main .item .check {
+  position: absolute;
+  top: 0px;
+  right: 0px;
   width: 60px;
   height: 70px;
   background-color: #99E2D0;
@@ -138,13 +152,25 @@ main .menu .item .check {
   display: flex;
   justify-content: center;
   flex-shrink: 0;
-  margin-right: -60px;
+  transition: all 0.5s ease-in-out;
 }
-main .menu .item .check .fa-solid {
+main .item .check .fa-solid {
   margin-top: auto;
   margin-bottom: auto;
   font-size: 20px;
   color: white;
+}
+main input[type=checkbox] + label {
+  cursor: pointer;
+}
+main input[type=checkbox] + label .check {
+  right: -60px;
+}
+main input[type=checkbox]:checked + label {
+  width: 100% -60px;
+}
+main input[type=checkbox]:checked + label .check {
+  right: 0px;
 }
 main .searchbutton {
   display: flex;

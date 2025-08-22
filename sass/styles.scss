@@ -75,12 +75,14 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
      
     .logo {
         height: 63px;
         width: 100%;
-        box-shadow: 0px 2px 4px 0px #00000026; // Not working?
+        box-shadow: 0px 2px 4px 0px #00000026; 
         overflow: visible;
+        z-index: 100;
         
         img {
             padding-top: 13px;
@@ -99,6 +101,7 @@ header {
         color: $color-font;
         background-color: $color-bg-grey2;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); // Not working?
+        z-index: 50;
         
         .input-content {
             display: flex;
@@ -116,6 +119,7 @@ header {
         background-color: $color-bg-grey;
         padding: 30px;
         gap: 20px;
+        
         p{
             font-family: "Roboto";
             font-weight: 300;
@@ -286,12 +290,41 @@ header {
                     top: 197px;
                     right: 23px;
                     
-
-                    input[type="checkbox"] {
-
-                        display: none;
-                    }
                 }
+        }
+    }
+}
+
+/* Checkboxes*/
+
+.heart {
+    position: absolute;
+}
+
+.checkbox {
+    display: none;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+
+    //Default State
+
+    
+
+    & + label {
+        position: relative;
+        cursor: pointer;
+        .heartChecked {
+            display: none;
+        } 
+    }
+
+    // Checked state
+
+    &:checked + label {
+        .heartChecked {
+            display: block;
         }
     }
 }
@@ -328,6 +361,47 @@ footer {
     }
 }
 
+/* Loader */
+
+.loader {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    animation: reduce ;
+    animation-delay: 5s;
+    animation-duration: 2s;
+    
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        animation: pulse 2s 0s 3;
+    }
+}
+
+/* Animations */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.5);
+    }
+
+    20% {
+        transform: scale(2);
+    }
+}
+
+@keyframes reduce {
+    0% {
+        display: block;
+    }
+
+    20% {
+        display: none;
+    }
+}
+
 
 /* Desktop */
 
@@ -340,6 +414,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        width: 100%;
 
     }
 
@@ -358,9 +433,10 @@ footer {
         }
 
     .header {
-        width: 100%;
+        width: 100vw;
+        
         .search {
-            width: 100%;
+            width: 100vw;
             padding: 0px;
         }
     }
