@@ -32,6 +32,7 @@ body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 0px;
     margin: 0px;
+    position: relative;
 }
 
 h1 {
@@ -111,11 +112,26 @@ header {
 /* Image */
 
 .image {
+    display: flex;
+    z-index: 0;
     img {
         height: 275px;
         width: 100%;
         background-clip: padding-box;
     }
+}
+
+/* Img Cover*/
+
+.img-cover {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-radius: 30px 30px 0px 0px;
+    background-color: $color-bg-grey;
+    position: absolute;
+    z-index: 20;
+    top: 310px;
 }
 
 /* Main */
@@ -138,69 +154,71 @@ main {
             width: 40px;
             background-color: $color-light-green;
         }
+    }    
+}
+
+/* Checkbox Card */
+
+.checkbox {
+    display: none;
+}
+
+.item {
+    width: 320px;
+    height: 70px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+
+    
+
+    .span-text {
+        display: inline-block;
+        width: 233px;
+        margin: 15px;
+
+        p {
+            font-size: 15px;
+            font-weight: 300;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        
     }
 
-/* Button */
-
-    .item {
-        position: relative;
-        background-color: white;
-        border-radius: 15px;
-        text-decoration: none;
-        color: black;
-        box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+    .span-check {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        overflow: hidden;
-        width: 100%;
+        transform: translateX(60px);
+        margin-left: -60px;
 
-        label {
-            width: 100%;
-            padding-right: 60px;
-        }
-        
-
-        .checkbox {
-            display: none;
-        }
-        
-        .itemMain {
-            width: 100%;
-            padding: 15px;
-
-            .priceline {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: auto;
-                
-
-                p {
-                    font-size: 15px;
-                    font-weight: 300;
-                }
-                .prix {
-                    font-size: 15px;
-                    font-weight: 500;
-                    
-                }
-            }
+        .price {
+            font-weight: 500;
+            margin: 15px;
+            align-self: flex-end;
         }
 
-        .check {
-            position: absolute;
-            top: 0px;
-            right: 0px;
+        .checked {
+            height: auto;
             width: 60px;
-            height: 70px;
             background-color: $color-light-green;
             border-radius: 0px 15px 15px 0px;
             display: flex;
             justify-content: center;
             flex-shrink: 0;
-            transition: all 0.5s ease-in-out;
+            
             .fa-solid {
                 margin-top: auto;
                 margin-bottom: auto;
@@ -210,49 +228,44 @@ main {
         }
     }
 
-input[type="checkbox"] {
-
-    
-
-    //Default State
-
-    & + label {
-        cursor: pointer;
-        .check {
-            right: -60px;
+    &:hover {
+        
+        .span-check {
+            transition: all 0.5s ease-in-out;
+            transform: translateX(0px);
+            
         }
-    }
-
-    // Checked state
-
-    &:checked + label {
-        width: 100% -60px ;
-        .check {
-            right: 0px;
+        .span-text {
+            transition: all 0.5s ease-in-out;
+            width: 173px;
+            
         }
     }
 }
 
-    /* Search button */
+/* Search button */
 
-    .searchbutton {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 16px;
-            font-weight: 400;
-            height: 50px;
-            width: 218px;
-            border-radius: 25px;
-            margin-bottom: 30px;
-            margin: auto;
-            @include gradient;
-            @include box-shadow;
+.searchbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    height: 50px;
+    width: 218px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    margin: auto;
+    @include gradient;
+    @include box-shadow;
+    transition: 0.5s;
+    &:hover {
+        opacity: 0.75;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        
     }
 }
-
-
 
 /* Footer */
 
@@ -285,6 +298,33 @@ footer {
     }
 }
 
+/* Checkbox Like  */
+
+input[type="checkbox"] {
+    position: absolute;
+
+    //Default State
+
+    & + label {
+        position: relative;
+        cursor: pointer;
+        .heartChecked {
+            display: none;
+        } 
+    }
+
+    // Checked state
+
+    &:checked + label {
+        .heartChecked {
+            display: block;
+        }
+        .heartUnchecked {
+            display: none;
+        }
+    }
+}
+
 /* Desktop */
 
 @media screen and (min-width: 961px) {
@@ -302,11 +342,14 @@ footer {
     }
 
     .img-cover {
+        display: block;
         width: 1055px;
         height: 30px;
         border-radius: 30px 30px 0px 0px;
-        background-color: $color-bg-grey;
+        background-color: $color-purple;
         position: absolute;
+        z-index: 20;
+        top: 400px;
     }
 
     main {

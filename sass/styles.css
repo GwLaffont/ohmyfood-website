@@ -4,6 +4,7 @@ body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding: 0px;
   margin: 0px;
+  width: 100%;
 }
 
 h1 {
@@ -74,12 +75,14 @@ header .input-placeholder .input-content {
   gap: 17px;
 }
 header .search {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #F6F6F6;
   padding: 30px;
   gap: 20px;
+  box-sizing: border-box;
 }
 header .search p {
   font-family: "Roboto";
@@ -288,40 +291,58 @@ footer .footer a .bolded {
 
 /* Loader */
 .loader {
-  height: 100vh;
+  background-color: grey;
   width: 100%;
-  position: relative;
-  animation: reduce;
-  animation-delay: 5s;
-  animation-duration: 2s;
+  height: 0vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: top;
+  overflow: hidden;
+  z-index: 1000;
+  animation-delay: 3s;
+  animation: slideup 2s linear;
 }
-.loader img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulse 2s 0s 3;
+.loader .loadroll {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 16px solid lavender;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-bottom: 16px solid #99E2D0;
+  animation: spin 2s linear infinite;
 }
 
 /* Animations */
-@keyframes pulse {
+@keyframes spin {
   0% {
-    transform: scale(1.5);
+    transform: rotate(0deg);
   }
-  20% {
-    transform: scale(2);
+  100% {
+    transform: rotate(360deg);
   }
 }
-@keyframes reduce {
+@keyframes slideup {
   0% {
-    display: block;
+    height: 100vh;
   }
-  20% {
-    display: none;
+  90% {
+    height: 100vh;
+  }
+  100% {
+    height: 0vh;
   }
 }
 /* Desktop */
 @media screen and (min-width: 961px) {
+  body .header {
+    width: 100%;
+  }
+  body .header .search {
+    width: 100%;
+    padding: 0px;
+  }
   .main {
     display: flex;
     flex-direction: column;
@@ -339,13 +360,6 @@ footer .footer a .bolded {
   }
   .explication .ex-wrap .ex-button {
     width: 335px;
-  }
-  .header {
-    width: 100vw;
-  }
-  .header .search {
-    width: 100vw;
-    padding: 0px;
   }
   .restaurants {
     display: flex;

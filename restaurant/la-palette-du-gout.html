@@ -21,94 +21,177 @@
     <div class="image">
         <img src="/assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
     </div>
+    <div class="img-cover"></div>
     <main>
-        <div class="img-cover"></div>
+        
         <div class="title">
             <div class="title-text"><h1>La palette du goût</h1></div>
             <div class="like">
-                        <input type="checkbox" id="checkbox" class="checkbox">
-                        <label for="heart">
-                            <img src="/assets/vectors/heart.svg" alt="like heart" class="heart">
-                            <img src="/assets/vectors/heart-full.svg" alt="like checked" class="heart heartChecked">
-                        </label>
-                    </div>
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label for="checkbox">
+                    <img src="/assets/vectors/heart.svg" alt="like heart" class="heart heartUnchecked">
+                    <img src="/assets/vectors/heart-full.svg" alt="like checked" class="heart heartChecked">
+                </label>
+            </div>
         </div>
         <div class="menu">
             <h2>Entrées</h2>
             <div class="bar"></div>
-            <div class="item">
-                <input type="checkbox" id="checkbox1" class="checkbox">
-                <label for="checkbox1">
-                    <div class="itemMain">
+            <input type="checkbox" name="checkbox" id="checkbox1" class="checkbox">
+            <label for="checkbox1">
+                <div class="item">
+                    <span class="span-text">
                         <h3>Fricassée d'escargots</h3>
-                        <div class="priceline">
-                            <p>Au piment d'Espelette </p>
-                            <div class="prix">25€</div>
+                        <p>Au piment d'Espelette</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">25€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                </label>
-            </div>
+                    </span>
+                </div>
+            </label>
 
-            <div class="item">
-                <div class="itemMain">
-                    <h3>Foie gras de canard mi-cuit</h3>
-                    <div class="priceline">
+            <input type="checkbox" name="checkbox2" id="checkbox2" class="checkbox">
+            <label for="checkbox2">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Foie gras de canard mi-cuit</h3>
                         <p>Et ses copeaux de truffe noire</p>
-                        <div class="prix">35€</div>
-                    </div>
-                    
+                    </span>
+                    <span class="span-check">
+                        <div class="price">35€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
                 </div>
-                <div class="check">
-                    <i class="fa-solid fa-circle-check"></i>
-                </div>
-            </div>
+            </label>
 
-            <div class="item">
-                <h3>Œuf au plat</h3>
-                <p>Assaisonné à la truffe sur lit de caviar</p>
-                <div class="prix">20€</div>
-            </div>
+            <input type="checkbox" name="checkbox3" id="checkbox3" class="checkbox">
+            <label for="checkbox3">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Œuf au plat</h3>
+                        <p>Assaisonné à la truffe sur lit de caviar</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">20€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+
         </div>
         <div class="menu">
             <h2>Plats</h2>
             <div class="bar"></div>
-            <div class="item">
-                <h3>Filet de bœuf aux herbes</h3>
-                <p>Accompagné de sa ribambelle de légumes</p>
-                <div class="prix">40€</div>
-            </div>
-            <div class="item">
-                <h3>Parmentier de queue de bœuf</h3>
-                <p>À la truffe noire sur sa purée de panais</p>
-                <div class="prix">35€</div>
-            </div>
-            <div class="item">
-                <h3>Filet de turbot</h3>
-                <p>Aux agrumes</p>
-                <div class="prix">44€</div>
-            </div>
+
+            <input type="checkbox" name="checkbox4" id="checkbox4" class="checkbox">
+            <label for="checkbox4">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Filet de bœuf aux herbes</h3>
+                        <p>Accompagné de sa ribambelle de légumes</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">40€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+
+            <input type="checkbox" name="checkbox5" id="checkbox5" class="checkbox">
+            <label for="checkbox5">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Parmentier de queue de bœuf</h3>
+                        <p>À la truffe noire sur sa purée de panais</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">35€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+
+            <input type="checkbox" name="checkbox6" id="checkbox6" class="checkbox">
+            <label for="checkbox6">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Filet de turbot</h3>
+                        <p>Aux agrumes</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">44€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            
         </div>
         <div class="menu">
             <h2>Desserts</h2>
             <div class="bar"></div>
-            <div class="item">
-                <h3>Paris-Brest</h3>
-                <p>Revisité</p>
-                <div class="prix">18€</div>
-            </div>
-            <div class="item">
-                <h3>Macaron au chocolat d'exception </h3>
-                <p>Et glace à la vanille de Madagascar</p>
-                <div class="prix">22€</div>
-            </div>
-            <div class="item">
-                <h3>Mousse au chocolat </h3>
-                <p>Au piment d'Espelette et à la truffe noire</p>
-                <div class="prix">23€</div>
-            </div>
+
+            <input type="checkbox" name="checkbox7" id="checkbox7" class="checkbox">
+            <label for="checkbox7">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Paris-Brest</h3>
+                        <p>Revisité</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">18€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox8" id="checkbox8" class="checkbox">
+            <label for="checkbox8">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Macaron au chocolat d'exception</h3>
+                        <p>Et glace à la vanille de Madagascar</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">22€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox9" id="checkbox9" class="checkbox">
+            <label for="checkbox9">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Mousse au chocolat</h3>
+                        <p>Au piment d'Espelette et à la truffe noire</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">23€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
         </div>
         <div class="searchbutton">
             <p>Commander</p>
