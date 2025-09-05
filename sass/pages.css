@@ -133,6 +133,19 @@ main .menu .bar {
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
+  /*&:hover {
+
+      .span-check {
+          transition: all 0.5s ease-in-out;
+          transform: translateX(0px);
+
+      }
+      .span-text {
+          transition: all 0.5s ease-in-out;
+          width: 173px;
+
+      }
+  }*/
 }
 .item .span-text {
   display: inline-block;
@@ -156,6 +169,7 @@ main .menu .bar {
   flex-direction: row;
   transform: translateX(60px);
   margin-left: -60px;
+  transition: all 0.5s ease-in-out;
 }
 .item .span-check .price {
   font-weight: 500;
@@ -176,14 +190,6 @@ main .menu .bar {
   margin-bottom: auto;
   font-size: 20px;
   color: white;
-}
-.item:hover .span-check {
-  transition: all 0.5s ease-in-out;
-  transform: translateX(0px);
-}
-.item:hover .span-text {
-  transition: all 0.5s ease-in-out;
-  width: 173px;
 }
 
 /* Search button */
@@ -251,6 +257,10 @@ input[type=checkbox]:checked + label .heartChecked {
 }
 input[type=checkbox]:checked + label .heartUnchecked {
   display: none;
+}
+input[type=checkbox]:checked + label .span-check {
+  transition: all 0.5s ease-in-out;
+  transform: translateX(0px);
 }
 
 /* Desktop */

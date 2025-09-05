@@ -203,6 +203,7 @@ main {
         flex-direction: row;
         transform: translateX(60px);
         margin-left: -60px;
+        transition: all 0.5s ease-in-out;
 
         .price {
             font-weight: 500;
@@ -228,7 +229,7 @@ main {
         }
     }
 
-    &:hover {
+    /*&:hover {
         
         .span-check {
             transition: all 0.5s ease-in-out;
@@ -240,7 +241,7 @@ main {
             width: 173px;
             
         }
-    }
+    }*/
 }
 
 /* Search button */
@@ -321,6 +322,10 @@ input[type="checkbox"] {
         }
         .heartUnchecked {
             display: none;
+        }
+        .span-check {
+            transition: all 0.5s ease-in-out;
+            transform: translateX(0px);
         }
     }
 }
