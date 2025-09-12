@@ -144,7 +144,7 @@ main {
     gap: 20px;
     
     .menu {
-        padding: 20px;
+        padding: 13px;
         display: flex;
         flex-direction: column;
         gap: 12px;
@@ -164,7 +164,7 @@ main {
 }
 
 .item {
-    width: 320px;
+    width: 349px;
     height: 70px;
     background-color: white;
     border-radius: 15px;
@@ -178,8 +178,9 @@ main {
 
     .span-text {
         display: inline-block;
-        width: 233px;
-        margin: 15px;
+        width: 312px;
+        margin: 15px 0px 15px 15px ;
+        transition: all 0.25s ease-in-out;
 
         p {
             font-size: 15px;
@@ -203,7 +204,7 @@ main {
         flex-direction: row;
         transform: translateX(60px);
         margin-left: -60px;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.25s ease-in-out;
 
         .price {
             font-weight: 500;
@@ -229,19 +230,6 @@ main {
         }
     }
 
-    /*&:hover {
-        
-        .span-check {
-            transition: all 0.5s ease-in-out;
-            transform: translateX(0px);
-            
-        }
-        .span-text {
-            transition: all 0.5s ease-in-out;
-            width: 173px;
-            
-        }
-    }*/
 }
 
 /* Search button */
@@ -258,6 +246,7 @@ main {
     border-radius: 25px;
     margin-bottom: 30px;
     margin: auto;
+    cursor: pointer;
     @include gradient;
     @include box-shadow;
     transition: 0.5s;
@@ -296,6 +285,10 @@ footer {
                 font-weight: 500;
             }
         }
+
+        .fa-solid {
+            margin-right: 10px;
+        }
     }
 }
 
@@ -327,51 +320,98 @@ input[type="checkbox"] {
             transition: all 0.5s ease-in-out;
             transform: translateX(0px);
         }
+
+        .span-text {
+            width: 222px;
+        }
     }
+}
+
+/*  Tablet */
+
+@media screen and (min-width:600px) {
+
+    .menu {
+                
+        margin: auto;
+
+        .item {
+            width: 500px ;
+        }   
+    }
+
+    
 }
 
 /* Desktop */
 
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 1440px) {
 
     body {
         position: relative;
-    }
 
-    .image {
-        img {
-            height: 383px;
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .img-cover {
-        display: block;
-        width: 1055px;
-        height: 30px;
-        border-radius: 30px 30px 0px 0px;
-        background-color: $color-purple;
-        position: absolute;
-        z-index: 20;
-        top: 400px;
-    }
-
-    main {
-        width: 1055px;
-        margin: auto;
-
-        .title {
-            margin: auto;
-            .like {
-                position: static;
+        .image {
+            img {
+                height: 383px;
+                width: 100%;
+                object-fit: cover;
             }
         }
 
-        .menu {
-            width: 634px;
+        main {
+            width: 1055px;
             margin: auto;
+            position: relative;
+
+            .title {
+                margin: auto;
+                .like {
+                    right: -50px;
+                }
+            }
+
+            .menu {
+                
+                margin: auto;
+
+                .item {
+                        width: 634px ;
+
+                        &:hover {
+                            .span-check {
+                                transition: all 0.25s ease-in-out;
+                                transform: translateX(0px); 
+                            }
+                        }
+                    }
+            }
+
+            .img-cover {
+                display: block;
+                width: 1055px;
+                height: 30px;
+                border-radius: 30px 30px 0px 0px;
+                background-color: $color-bg-grey;
+                position: absolute;
+                top: -30px !important;
+                z-index: 20;
+                top: 400px;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row-reverse;
+            column-gap: 100px;
+
+            .footer {
+                display: flex;
+                flex-direction: row;
+                column-gap: 10px;
+            }
         }
     }
+
+    
 
 }

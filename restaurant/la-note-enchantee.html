@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" >
     <title>site la note enchantee</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="restaurant la note enchantée">
     <script src="https://kit.fontawesome.com/dc3463066b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/sass/pages.css" >
 </head>
 <body>
     <header>
@@ -15,71 +17,197 @@
             <img src="/assets/logo/ohmyfood.png" alt="logo ohmyfood">
         </div>
         <a href="/index.html" class="back"><i class="fa-solid fa-arrow-left"></i></a>
-        <img src="/assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
     </header>
+    <div class="image">
+        <img src="/assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+    </div>
+
     <main>
+        <div class="img-cover"></div>
         <div class="title">
             <div class="title-text"><h1>La note enchantée</h1></div>
-            <div class="like"><i class="fa-regular fa-heart"></i></div>
-        </div>
-        <div class="menu">
-            <p class="entrees">entrées</p>
-            <div class="item">
-                <h3>Ravioles de foie gras</h3>
-                <p>Accompagnées de leur crème à la truffe</p>
-                <div class="prix">25€</div>
-            </div>
-            <div class="item">
-                <h3>Caviar osciètre </h3>
-                <p>Sur blini à la farine de blé noir</p>
-                <div class="prix">35€</div>
-            </div>
-            <div class="item">
-                <h3>Homard et espuma de potiron</h3>
-                <p>Marinés aux zestes d'orange</p>
-                <div class="prix">20€</div>
-            </div>
-            <div class="item">
-                <h3>Foie gras de canard cuit entier</h3>
-                <p>Confiture de figue et pain toasté</p>
-                <div class="prix">35€</div>
+            <div class="like">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label for="checkbox">
+                    <img src="/assets/vectors/heart.svg" alt="like heart" class="heart heartUnchecked">
+                    <img src="/assets/vectors/heart-full.svg" alt="like checked" class="heart heartChecked">
+                </label>
             </div>
         </div>
+
         <div class="menu">
-            <p class="plats">plats</p>
-            <div class="item">
-                <h3>Noix de coquilles Saint-Jacques</h3>
-                <p>Sur lit de purée de céleri-rave</p>
-                <div class="prix">40€</div>
-            </div>
-            <div class="item">
-                <h3>Langoustine poêlée</h3>
-                <p>Purée de patate douce</p>
-                <div class="prix">35€</div>
-            </div>
-            <div class="item">
-                <h3>Mijoté de queue de bœuf </h3>
-                <p>Et riz sauvage aux zestes de citron</p>
-                <div class="prix">44€</div>
-            </div>
+            <h2>Entrées</h2>
+            <div class="bar"></div>
+            
+            <input type="checkbox" name="checkbox" id="checkbox1" class="checkbox">
+            <label for="checkbox1">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Ravioles de foie gras</h3>
+                        <p>AAccompagnées de leur crème à la truffe</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">25€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox2" id="checkbox2" class="checkbox">
+            <label for="checkbox2">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Caviar osciètre</h3>
+                        <p>Sur blini à la farine de blé noir</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">35€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+
+            <input type="checkbox" name="checkbox3" id="checkbox3" class="checkbox">
+            <label for="checkbox3">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Homard et espuma de potiron</h3>
+                        <p>Marinés aux zestes d'orange</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">20€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+
+            <input type="checkbox" name="checkbox10" id="checkbox10" class="checkbox">
+            <label for="checkbox10">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Foie gras de canard cuit entier</h3>
+                        <p>Confiture de figue et pain toasté</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">35€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
         </div>
         <div class="menu">
-            <p class="desserts">desserts</p>
-            <div class="item">
-                <h3>Macaron noisette et chocolat</h3>
-                <p>Glace au caramel brun et sel de Guérande</p>
-                <div class="prix">18€</div>
-            </div>
-            <div class="item">
-                <h3>Baba au rhum revisité</h3>
-                <p>Avec son coulis de citron</p>
-                <div class="prix">22€</div>
-            </div>
-            <div class="item">
-                <h3>Tarte au citron meringuée</h3>
-                <p>Déstructurée</p>
-                <div class="prix">23€</div>
-            </div>
+            <h2>plats</h2>
+            <div class="bar"></div>
+            
+            <input type="checkbox" name="checkbox4" id="checkbox4" class="checkbox">
+            <label for="checkbox4">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Noix de coquilles Saint-Jacques</h3>
+                        <p>Sur lit de purée de céleri-rave</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">40€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox5" id="checkbox5" class="checkbox">
+            <label for="checkbox5">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Langoustine poêlée</h3>
+                        <p>Purée de patate douce</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">35€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox6" id="checkbox6" class="checkbox">
+            <label for="checkbox6">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Mijoté de queue de bœuf</h3>
+                        <p>Et riz sauvage aux zestes de citron</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">45€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+        </div>
+        <div class="menu">
+            <h2>Desserts</h2>
+            <div class="bar"></div>
+
+            <input type="checkbox" name="checkbox7" id="checkbox7" class="checkbox">
+            <label for="checkbox7">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Macaron noisette et chocolat</h3>
+                        <p>Glace au caramel brun et sel de Guérande</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">18€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+
+            <input type="checkbox" name="checkbox8" id="checkbox8" class="checkbox">
+            <label for="checkbox8">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Baba au rhum revisité</h3>
+                        <p>Avec son coulis de citron</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">22€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox9" id="checkbox9" class="checkbox">
+            <label for="checkbox9">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Tarte au citron meringuée</h3>
+                        <p>Déstructurée</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">23€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
         </div>
         <div class="searchbutton">
             <p>Commander</p>
@@ -87,15 +215,15 @@
     </main>
 
     <footer>
-        <div class="Shrikhand">
+        <div class="shrikhand">
             <p>ohmyfood</p>
         </div>
-        <ul class="footer">
-            <li><a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
-            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="footer">
+            <a href="#"><p class="bolded"><i class="fa-solid fa-utensils"></i>  Proposer un restaurant</p></a>
+            <a href="#"><p class="bolded"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p></a>
+            <a href="#"><p>Mentions légales</p></a>
+            <a href="#"><p>Contact</p></a>
+        </div>
     </footer>
 </body>
 </html>

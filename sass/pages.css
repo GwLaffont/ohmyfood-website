@@ -107,7 +107,7 @@ main {
   gap: 20px;
 }
 main .menu {
-  padding: 20px;
+  padding: 13px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -124,7 +124,7 @@ main .menu .bar {
 }
 
 .item {
-  width: 320px;
+  width: 349px;
   height: 70px;
   background-color: white;
   border-radius: 15px;
@@ -133,24 +133,12 @@ main .menu .bar {
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
-  /*&:hover {
-
-      .span-check {
-          transition: all 0.5s ease-in-out;
-          transform: translateX(0px);
-
-      }
-      .span-text {
-          transition: all 0.5s ease-in-out;
-          width: 173px;
-
-      }
-  }*/
 }
 .item .span-text {
   display: inline-block;
-  width: 233px;
-  margin: 15px;
+  width: 312px;
+  margin: 15px 0px 15px 15px;
+  transition: all 0.25s ease-in-out;
 }
 .item .span-text p {
   font-size: 15px;
@@ -169,7 +157,7 @@ main .menu .bar {
   flex-direction: row;
   transform: translateX(60px);
   margin-left: -60px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .item .span-check .price {
   font-weight: 500;
@@ -205,6 +193,7 @@ main .menu .bar {
   border-radius: 25px;
   margin-bottom: 30px;
   margin: auto;
+  cursor: pointer;
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   transition: 0.5s;
@@ -240,6 +229,9 @@ footer .footer a {
 footer .footer a .bolded {
   font-weight: 500;
 }
+footer .footer .fa-solid {
+  margin-right: 10px;
+}
 
 /* Checkbox Like  */
 input[type=checkbox] {
@@ -262,40 +254,72 @@ input[type=checkbox]:checked + label .span-check {
   transition: all 0.5s ease-in-out;
   transform: translateX(0px);
 }
+input[type=checkbox]:checked + label .span-text {
+  width: 222px;
+}
 
+/*  Tablet */
+@media screen and (min-width: 600px) {
+  .menu {
+    margin: auto;
+  }
+  .menu .item {
+    width: 500px;
+  }
+}
 /* Desktop */
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 1440px) {
   body {
     position: relative;
   }
-  .image img {
+  body .image img {
     height: 383px;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .img-cover {
+  body main {
+    width: 1055px;
+    margin: auto;
+    position: relative;
+  }
+  body main .title {
+    margin: auto;
+  }
+  body main .title .like {
+    right: -50px;
+  }
+  body main .menu {
+    margin: auto;
+  }
+  body main .menu .item {
+    width: 634px;
+  }
+  body main .menu .item:hover .span-check {
+    transition: all 0.25s ease-in-out;
+    transform: translateX(0px);
+  }
+  body main .img-cover {
     display: block;
     width: 1055px;
     height: 30px;
     border-radius: 30px 30px 0px 0px;
-    background-color: #9356DC;
+    background-color: #F6F6F6;
     position: absolute;
+    top: -30px !important;
     z-index: 20;
     top: 400px;
   }
-  main {
-    width: 1055px;
-    margin: auto;
+  body footer {
+    display: flex;
+    flex-direction: row-reverse;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
   }
-  main .title {
-    margin: auto;
-  }
-  main .title .like {
-    position: static;
-  }
-  main .menu {
-    width: 634px;
-    margin: auto;
+  body footer .footer {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
 }/*# sourceMappingURL=pages.css.map */

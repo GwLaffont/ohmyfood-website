@@ -288,6 +288,9 @@ footer .footer a {
 footer .footer a .bolded {
   font-weight: 500;
 }
+footer .footer .fa-solid {
+  margin-right: 10px;
+}
 
 /* Loader */
 .loader {
@@ -334,8 +337,41 @@ footer .footer a .bolded {
     height: 0vh;
   }
 }
+/*  Tablet */
+@media screen and (min-width: 600px) {
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurants h2 {
+    margin-left: 0px;
+  }
+  .restaurants .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    max-width: 1080px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
+  footer .footer {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+}
 /* Desktop */
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 1440px) {
   body .header {
     width: 100%;
   }

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" >
     <title>site le delice des sens</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="restaurant le délice des sens">
     <script src="https://kit.fontawesome.com/dc3463066b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/sass/pages.css" >
 </head>
 <body>
     <header>
@@ -15,82 +17,199 @@
             <img src="/assets/logo/ohmyfood.png" alt="logo ohmyfood">
         </div>
         <a href="/index.html" class="back"><i class="fa-solid fa-arrow-left"></i></a>
-        <img src="/assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
     </header>
+    <div class="image">
+        <img src="/assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+    </div>
+
     <main>
+        <div class="img-cover"></div>
         <div class="title">
             <div class="title-text"><h1>Le délice des sens</h1></div>
-            <div class="like"><i class="fa-regular fa-heart"></i></div>
+            <div class="like">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label for="checkbox">
+                    <img src="/assets/vectors/heart.svg" alt="like heart" class="heart heartUnchecked">
+                    <img src="/assets/vectors/heart-full.svg" alt="like checked" class="heart heartChecked">
+                </label>
+            </div>
         </div>
+
         <div class="menu">
-            <p class="entrees">entrées</p>
-            <div class="item">
-                <h3>Tartare de thon</h3>
-                <p>Assaisonné au yuzu</p>
-                <div class="prix">25€</div>
-            </div>
-            <div class="item">
-                <h3>Bouchée de homard croustillant </h3>
-                <p>Et sa farandole de petits légumes</p>
-                <div class="prix">35€</div>
-            </div>
-            <div class="item">
-                <h3>Velouté de cèpes </h3>
-                <p>Aux truffes</p>
-                <div class="prix">20€</div>
-            </div>
+            <h2>Entrées</h2>
+            <div class="bar"></div>
+            
+            <input type="checkbox" name="checkbox" id="checkbox1" class="checkbox">
+            <label for="checkbox1">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Tartare de thon</h3>
+                        <p>Assaisonné au yuzu</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">25€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox2" id="checkbox2" class="checkbox">
+            <label for="checkbox2">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Bouchée de homard croustillant</h3>
+                        <p>Et sa farandole de petits légumes</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">35€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+
+            <input type="checkbox" name="checkbox3" id="checkbox3" class="checkbox">
+            <label for="checkbox3">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Velouté de cèpes</h3>
+                        <p>Aux truffes</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">20€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
         </div>
+
         <div class="menu">
-            <p class="plats">plats</p>
-            <div class="item">
-                <h3>Poulet rôti aux herbes de Provence </h3>
-                <p>Et sa crème de truffe</p>
-                <div class="prix">40€</div>
-            </div>
-            <div class="item">
-                <h3>Langouste rôtie</h3>
-                <p>Et ses légumes de saison</p>
-                <div class="prix">35€</div>
-            </div>
-            <div class="item">
-                <h3>Côte de bœuf Angus </h3>
-                <p>Et sa purée de panais</p>
-                <div class="prix">44€</div>
-            </div>
+            <h2>plats</h2>
+            <div class="bar"></div>
+            
+            <input type="checkbox" name="checkbox4" id="checkbox4" class="checkbox">
+            <label for="checkbox4">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Poulet rôti aux herbes de Provence</h3>
+                        <p>Et sa crème de truffe</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">40€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox5" id="checkbox5" class="checkbox">
+            <label for="checkbox5">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Langouste rôtie</h3>
+                        <p>Et ses légumes de saison</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">35€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox6" id="checkbox6" class="checkbox">
+            <label for="checkbox6">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Côte de bœuf Angus</h3>
+                        <p>Et sa purée de panais</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">44€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label> 
         </div>
+
         <div class="menu">
-            <p class="desserts">desserts</p>
-            <div class="item">
-                <h3>Farandole de desserts</h3>
-                <p>Du chef</p>
-                <div class="prix">18€</div>
-            </div>
-            <div class="item">
-                <h3>Crème brulée</h3>
-                <p>Revisitée</p>
-                <div class="prix">22€</div>
-            </div>
-            <div class="item">
-                <h3>Tiramisu</h3>
-                <p>À la noisette</p>
-                <div class="prix">23€</div>
-            </div>
+            <h2>Desserts</h2>
+            <div class="bar"></div>
+
+            <input type="checkbox" name="checkbox7" id="checkbox7" class="checkbox">
+            <label for="checkbox7">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Farandole de desserts</h3>
+                        <p>Du chef</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">18€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+
+            <input type="checkbox" name="checkbox8" id="checkbox8" class="checkbox">
+            <label for="checkbox8">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Crème brulée</h3>
+                        <p>Revisitée</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">22€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
+            <input type="checkbox" name="checkbox9" id="checkbox9" class="checkbox">
+            <label for="checkbox9">
+                <div class="item">
+                    <span class="span-text">
+                        <h3>Tiramisu</h3>
+                        <p>À la noisette</p>
+                    </span>
+                    <span class="span-check">
+                        <div class="price">23€</div>
+                        <div class="checked">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </span>
+                </div>
+            </label>
+            
         </div>
+
         <div class="searchbutton">
             <p>Commander</p>
         </div>
     </main>
 
     <footer>
-        <div class="Shrikhand">
+        <div class="shrikhand">
             <p>ohmyfood</p>
         </div>
-        <ul class="footer">
-            <li><a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
-            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="footer">
+            <a href="#"><p class="bolded"><i class="fa-solid fa-utensils"></i>  Proposer un restaurant</p></a>
+            <a href="#"><p class="bolded"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p></a>
+            <a href="#"><p>Mentions légales</p></a>
+            <a href="#"><p>Contact</p></a>
+        </div>
     </footer>
 </body>
 </html>
