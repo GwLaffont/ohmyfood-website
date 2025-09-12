@@ -287,48 +287,55 @@ header {
                 }
 
             }
-            .like {
-                    position: absolute;
-                    width: 22px;
-                    height: 21px;
-                    top: 197px;
-                    right: 23px;
-                    
-                }
+            
         }
     }
 }
 
 /* Checkboxes*/
 
-.heart {
+.like {
     position: absolute;
+    width: 22px;
+    height: 21px;
+    top: 197px;
+    right: 23px;
+
+    .checkbox {
+        display: none;
+    }
+
+    .heart {
+            position: absolute;
+    }
+
+    .heartChecked {
+        opacity: 0;
+    }
+
+   
+
+    
 }
 
-.checkbox {
-    display: none;
-}
 
 input[type="checkbox"] {
     position: absolute;
 
-    //Default State
-
-    
+    //Default State    
 
     & + label {
         position: relative;
         cursor: pointer;
-        .heartChecked {
-            display: none;
-        } 
+        
     }
 
     // Checked state
 
     &:checked + label {
         .heartChecked {
-            display: block;
+            opacity: 1;
+            transition: all 0.25s ease-in-out;
         }
     }
 }
@@ -459,6 +466,15 @@ footer {
                 padding: 0px;
             }
         }
+    }
+
+    .like {
+        &:hover {
+        .heartChecked {
+            opacity: 1;
+            transition: all 0.25s ease-in-out;
+        }
+    }
     }
     
 

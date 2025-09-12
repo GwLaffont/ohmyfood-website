@@ -231,21 +231,23 @@ header .search .searchbutton:hover {
   font-size: 17px;
   font-weight: 300;
 }
-.restaurants .card-wrapper .card .like {
+
+/* Checkboxes*/
+.like {
   position: absolute;
   width: 22px;
   height: 21px;
   top: 197px;
   right: 23px;
 }
-
-/* Checkboxes*/
-.heart {
+.like .checkbox {
+  display: none;
+}
+.like .heart {
   position: absolute;
 }
-
-.checkbox {
-  display: none;
+.like .heartChecked {
+  opacity: 0;
 }
 
 input[type=checkbox] {
@@ -255,11 +257,9 @@ input[type=checkbox] + label {
   position: relative;
   cursor: pointer;
 }
-input[type=checkbox] + label .heartChecked {
-  display: none;
-}
 input[type=checkbox]:checked + label .heartChecked {
-  display: block;
+  opacity: 1;
+  transition: all 0.25s ease-in-out;
 }
 
 /* Footer */
@@ -378,6 +378,10 @@ footer .footer .fa-solid {
   body .header .search {
     width: 100%;
     padding: 0px;
+  }
+  .like:hover .heartChecked {
+    opacity: 1;
+    transition: all 0.25s ease-in-out;
   }
   .main {
     display: flex;
