@@ -177,10 +177,12 @@ main {
     
 
     .span-text {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         width: 312px;
         margin: 15px 0px 15px 15px ;
         transition: all 0.25s ease-in-out;
+        
 
 
         .p {
@@ -334,6 +336,15 @@ input[type="checkbox"] {
 
 @media screen and (min-width:600px) {
 
+    .title {
+        align-self: center;
+        position: relative;
+
+        .like {
+            position: absolute;
+            right: -50px;
+        }
+    }
     .menu {
                 
         margin: auto;
@@ -342,6 +353,19 @@ input[type="checkbox"] {
             width: 500px ;
         }   
     }
+
+    /* Checkbox Like  */
+
+input[type="checkbox"] {
+
+    // Checked state
+
+    &:checked + label {
+        .span-text {
+            width: 400px;
+        }
+    }
+}
 
     
 }

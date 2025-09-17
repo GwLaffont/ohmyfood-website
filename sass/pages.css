@@ -135,22 +135,11 @@ main .menu .bar {
   overflow: hidden;
 }
 .item .span-text {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 312px;
   margin: 15px 0px 15px 15px;
   transition: all 0.25s ease-in-out;
-}
-.item .span-text p {
-  font-size: 15px;
-  font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.item .span-text h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .item .span-text .p {
   font-size: 15px;
@@ -274,11 +263,23 @@ input[type=checkbox]:checked + label .span-text {
 
 /*  Tablet */
 @media screen and (min-width: 600px) {
+  .title {
+    align-self: center;
+    position: relative;
+  }
+  .title .like {
+    position: absolute;
+    right: -50px;
+  }
   .menu {
     margin: auto;
   }
   .menu .item {
     width: 500px;
+  }
+  /* Checkbox Like  */
+  input[type=checkbox]:checked + label .span-text {
+    width: 400px;
   }
 }
 /* Desktop */
