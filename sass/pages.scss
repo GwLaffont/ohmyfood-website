@@ -182,7 +182,8 @@ main {
         margin: 15px 0px 15px 15px ;
         transition: all 0.25s ease-in-out;
 
-        p {
+
+        .p {
             font-size: 15px;
             font-weight: 300;
             white-space: nowrap;
@@ -190,10 +191,12 @@ main {
             text-overflow: ellipsis;
         }
 
-        h3 {
+        .h3 {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-size: 18px;
+            font-weight: 500;
         }
         
         

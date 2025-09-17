@@ -152,6 +152,20 @@ main .menu .bar {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.item .span-text .p {
+  font-size: 15px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item .span-text .h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
 .item .span-check {
   display: flex;
   flex-direction: row;
